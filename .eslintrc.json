@@ -1,0 +1,23 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2021": true,
+        "jest": true
+    },
+    "rules": {
+        "prettier/prettier": "warn",
+        "no-unused-vars": "warn",
+        "indent": ["warn", 4],
+        "quotes": "warn",
+        "space-before-function-paren": "warn",
+        "eol-last": "warn"
+    },
+    "extends": [
+        "standard",
+        "prettier"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 12
+    }
+}
