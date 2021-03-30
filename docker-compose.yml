@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+    web:
+        container_name: api-city
+        build: .
+        command: yarn dev
+        volumes:
+            - .:/usr/app/
+        environment:
+            NODE_ENV: 'development'
+            DB_MONGODB_NAME_TEST: 'api_city_test'
+            DB_MONGODB_NAME: 'api_city'
+            DB_MONGODB_DOMAIN: 'mongodb://database'
+            PORT: 9090
+            LOGGER_LEVEL: debug
+        ports:
+            - '9090:9090'
+        depends_on:
+            - database
+        links:
+            - database
+
+    database:
+        container_name: mongodb-api-city
+        image: 'mongo'
+        volumes:
+            - ./data:/data/db
+        ports:
+            - '27017:27017'
