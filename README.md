@@ -1,4 +1,4 @@
-![SANDIEGO](docs/black-san-diego-city.png?raw=true "dark San Diego")
+![CHICAGO](docs/black-chicago-city.png?raw=true "dark Chicago")
 # api-rest-cidade-nodejs
 
 Esta api REST em Node.js é responsável por manipular os dados de Estado e Cidade que são obtidos através do banco de Dados MongoDB.
