@@ -4,11 +4,11 @@ WORKDIR /usr/app
 
 RUN rm -rf node_modules/
 
-COPY package.json .
+COPY ./api/package.json .
 
 RUN yarn install
 
-COPY . .
+COPY ./api .
 
 EXPOSE 9090
 

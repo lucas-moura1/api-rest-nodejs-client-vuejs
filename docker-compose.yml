@@ -6,7 +6,7 @@ services:
         build: .
         command: yarn dev
         volumes:
-            - .:/usr/app/
+            - ./api:/usr/app/
         environment:
             NODE_ENV: 'development'
             DB_MONGODB_NAME_TEST: 'api_city_test'
@@ -25,6 +25,6 @@ services:
         container_name: mongodb-api-city
         image: 'mongo'
         volumes:
-            - ./data:/data/db
+            - ./api/data:/data/db
         ports:
             - '27017:27017'
