@@ -1,4 +1,4 @@
-![CHICAGO](docs/black-chicago-city.png?raw=true "dark Chicago")
+![CHICAGO](/docs/black-chicago-city.png?raw=true "dark Chicago")
 # api-rest-cidade-nodejs
 
 Este projeto contem uma api REST em Node.js, onde é responsável por manipular os dados de Estado e Cidade que são obtidos através do banco de Dados MongoDB. E um client em Vue.js para a exibição de todos os dados das entidades correspondentes.
