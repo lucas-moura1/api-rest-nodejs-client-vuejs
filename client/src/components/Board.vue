@@ -63,6 +63,7 @@ export default {
         border-style: ridge;
         background: white;
         margin-bottom: 20px;
+        overflow-x: auto;
     }
 
     .container .container-table table{
@@ -81,7 +82,6 @@ export default {
 
     tr {
         height: 25px;
-        width: 90%;
     }
 
     tr:hover {
@@ -99,4 +99,10 @@ export default {
         border-bottom: 2px solid #ddd;
     }
 
+    @media(max-width: 800px) {
+        th, td {
+            width: 140px;
+            height: auto;
+        }
+    }
 </style>

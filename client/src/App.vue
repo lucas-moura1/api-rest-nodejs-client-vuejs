@@ -5,8 +5,7 @@
 </template>
 
 <script>
-import { getAllStates } from './services/stateService'
-import { getAllCities } from './services/cityService'
+import { getAllDatas } from './services'
 import Board from './components/Board.vue'
 
 export default {
@@ -21,12 +20,8 @@ export default {
     },
 
   methods: {
-    async getAll(type) {
-        const method =  type === 'state' ?
-            getAllStates :
-            getAllCities
-
-        const response =  await method().then(data => data)
+    async getAll(endPoint) {
+        const response =  await getAllDatas(endPoint).then(data => data)
 
         return response
     },
@@ -55,8 +50,8 @@ export default {
 
   created() {
       const init = async () => {
-            const stateData = await this.getAll('state')
-            const cityData = await this.getAll('city')
+            const stateData = await this.getAll('estados')
+            const cityData = await this.getAll('cidades')
 
             const newcityData = this.treatCityArray(cityData)
 
