@@ -7,6 +7,7 @@ services:
         command: yarn dev
         volumes:
             - ./api:/usr/app/
+            - /usr/app/node_modules
         environment:
             NODE_ENV: 'development'
             DB_MONGODB_NAME_TEST: 'api_city_test'
@@ -23,12 +24,11 @@ services:
 
     client:
         container_name: client-api-city
-        build:
-            context: ./client
-            dockerfile: Dockerfile
+        build: ./client
         command: yarn serve
         volumes:
             - ./client:/usr/client
+            - /usr/client/node_modules
         ports:
             - '8080:8080'
         depends_on:

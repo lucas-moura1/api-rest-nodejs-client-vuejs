@@ -6,7 +6,7 @@ RUN rm -rf node_modules/
 
 COPY ./package.json .
 
-RUN yarn install
+RUN yarn
 
 COPY . .
 
