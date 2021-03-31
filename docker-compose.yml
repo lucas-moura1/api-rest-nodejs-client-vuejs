@@ -3,7 +3,7 @@ version: '3'
 services:
     web:
         container_name: api-city
-        build: .
+        build: ./api
         command: yarn dev
         volumes:
             - ./api:/usr/app/
@@ -20,6 +20,21 @@ services:
             - database
         links:
             - database
+
+    client:
+        container_name: client-api-city
+        build:
+            context: ./client
+            dockerfile: Dockerfile
+        command: yarn serve
+        volumes:
+            - ./client:/usr/client
+        ports:
+            - '8080:8080'
+        depends_on:
+            - web
+        links:
+            - web
 
     database:
         container_name: mongodb-api-city
