@@ -1,7 +1,7 @@
 ![CHICAGO](docs/black-chicago-city.png?raw=true "dark Chicago")
 # api-rest-cidade-nodejs
 
-Esta api REST em Node.js é responsável por manipular os dados de Estado e Cidade que são obtidos através do banco de Dados MongoDB.
+Este projeto contem uma api REST em Node.js, onde é responsável por manipular os dados de Estado e Cidade que são obtidos através do banco de Dados MongoDB. E um client em Vue.js para a exibição de todos os dados das entidades correspondentes.
 
 ## **Modelos das entidades**
 
@@ -187,7 +187,7 @@ query: {
 }
 ```
 
-## **Requisitos para execução**
+## **Requisitos para execução do projeto**
 
 Deve ter:
 - ***Docker*** e ***docker-compose*** instalado na máquina.
@@ -197,10 +197,12 @@ Deve ter:
 - ```git clone <url_repositorio>``` : clonar o repositório;
 - ```sudo docker-compose up```: rodar a aplicação
 
+Para acessar a API diretamente é preciso acessar ```http://localhost:9090``` + o endPoint. E para acessar o Client de consulta é preciso acessar ```http://localhost:8080```
+
 ### Para executar os testes
 
 - Alterar a variável de ambiente chamado ***NODE_ENV*** dentro do arquivo ```docker-compose.yml``` de ***development*** para ***test***;
 - ```sudo docker-compose up``` para rodar a aplicação;
-- ```docker ps``` para obter ***id*** do container da aplicação principal;
+- ```docker ps``` para obter ***id*** do container da API REST;
 - ```docker exec -it <container_id> bash``` para executar o bash e "entrar" no container da aplicação principal;
 - ```yarn test``` para executar os testes.
