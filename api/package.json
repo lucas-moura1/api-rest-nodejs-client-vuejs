@@ -2,14 +2,14 @@
   "name": "api-rest-cidade-nodejs",
   "version": "1.0.0",
   "description": "Api REST para CRUD de cidade e estado",
-  "main": "src/app.js",
+  "main": "index.js",
   "repository": "https://github.com/lucas-moura1/api-rest-cidade-nodejs.git",
   "author": "Lucas Moura <lucas3ms.ls@gmail.com>",
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "start": "node src/app.js",
-    "dev": "nodemon src/app.js"
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
